@@ -26,7 +26,7 @@ public class crear_cuenta extends AppCompatActivity {
         setContentView(R.layout.activity_crear_cuenta);
 
         RLcc = findViewById(R.id.RLcc);
-        button = findViewById(R.id.button);
+       // button = findViewById(R.id.registerBtn);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +45,7 @@ public class crear_cuenta extends AppCompatActivity {
             }
         });
 
-        RLcc.animate().translationY(-1800).setDuration(2000).setStartDelay(0);
+        RLcc.animate().translationY(-1190).setDuration(2000).setStartDelay(0);
 
     }
 

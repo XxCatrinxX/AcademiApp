@@ -73,34 +73,43 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp" />
 
-
-                <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txtusuario"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_account_box_24"
-                android:ems="10"
-                android:hint=" Usuario"
-                android:inputType="text"
-                android:textColor="@color/gray"
-                android:textColorHint="#F7959393"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:layout_height="match_parent"
+                android:textColorHint="@color/hint"
+                app:endIconMode="clear_text" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tetusuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_account_box_24"
+                    android:hint=" Usuario"
+                    android:textColor="@color/gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="30dp" />
+                android:layout_height="20dp" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txtcontraseña"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/baseline_password_24"
-                android:ems="10"
-                android:hint=" Contraseña"
-                android:inputType="textPassword"
-                android:textColor="@color/gray"
-                android:textColorHint="#F7959393"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:layout_height="match_parent"
+                android:textColorHint="@color/hint"
+                app:endIconMode="password_toggle" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tetcontraseña"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_password_24"
+                    android:hint=" Contraseña"
+                    android:inputType="textPassword"
+                    android:textColor="@color/gray" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <RelativeLayout
@@ -145,10 +154,10 @@
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="30dp" />
+                android:layout_height="10dp" />
 
             <Button
-                android:id="@+id/mb2"
+                android:id="@+id/btncrearcuenta"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:backgroundTint="#D7C83DFB"
