@@ -5,38 +5,70 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_inicio"
             android:icon="@drawable/outline_home_24"
             android:title="Inicio" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_calendario"
             android:icon="@drawable/baseline_calendar_month_24"
             android:title="Calendario" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_horario"
             android:icon="@drawable/baseline_event_24"
             android:title="Horario" />
     </group>
 
+  <item android:title="ACADEMICO">
+      <menu>
     <group android:checkableBehavior="single" >
-
         <item
-
+            android:id="@+id/nav_calificaciones"
             android:icon="@drawable/baseline_school_24"
             android:title="Calificaciones" />
 
         <item
-            android:title="Materias"
-            android:icon="@drawable/materia"/>
+
+            android:id="@+id/nav_materias"
+            android:icon="@drawable/materia"
+            android:title="Materias" />
 
         <item
-            android:title="Profesores"
-            android:icon="@drawable/profesor"/>
+
+            android:id="@+id/nav_profesores"
+            android:icon="@drawable/profesor"
+            android:title="Profesores" />
 
         <item
+            android:id="@+id/nav_notas"
             android:icon="@drawable/notas"
             android:title="Notas" />
     </group>
+      </menu>
+  </item>
+
+
+    <item android:title="CONFIGURACION">
+        <menu>
+            <group android:checkableBehavior="single" >
+
+                <item
+                    android:icon="@drawable/ajustes"
+                    android:title="Ajustes"/>
+
+                <item
+                    android:icon="@drawable/ayuda"
+                    android:title="Ayuda"/>
+
+            </group>
+
+            <group>
+
+                <item android:icon="@drawable/salida"
+                    android:title="Salir" />
+
+            </group>
+        </menu>
+    </item>
 
 
 </menu>

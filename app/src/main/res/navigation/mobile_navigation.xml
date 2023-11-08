@@ -3,23 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_inicio">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.academiapp.ui.home.InicioFragment"
+        android:id="@+id/nav_inicio"
+        android:name="com.example.academiapp.ui.inicio.InicioFragment"
         android:label="@string/menu_inicio"
         tools:layout="@layout/fragment_inicio" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.academiapp.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_calendario"
+        android:name="com.example.academiapp.ui.calendario.CalendarioFragment"
         android:label="@string/menu_calendario"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_calendario" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.academiapp.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_calificaciones"
+        android:name="com.example.academiapp.ui.calificaciones.CalificacionesFragment"
+        android:label="@string/menu_calificaciones"
+        tools:layout="@layout/fragment_calificaciones" />
+
+    <fragment
+        android:id="@+id/nav_horario"
+        android:name="com.example.academiapp.ui.horario.HorarioFragment"
         android:label="@string/menu_horario"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_horario" />
+
+    <fragment
+        android:id="@+id/nav_materias"
+        android:name="com.example.academiapp.ui.materias.MateriasFragment"
+        android:label="@string/menu_materias"
+        tools:layout="@layout/fragment_materias"/>
+
+    <fragment
+        android:id="@+id/nav_profesores"
+        android:name="com.example.academiapp.ui.profesores.ProfesoresFragment"
+        android:label="@string/menu_profesores"
+        tools:layout="@layout/fragment_profesores"/>
+
+    <fragment
+        android:id="@+id/nav_notas"
+        android:name="com.example.academiapp.ui.notas.NotasFragment"
+        android:label="@string/menu_notas"
+        tools:layout="@layout/fragment_notas"/>
+
 </navigation>

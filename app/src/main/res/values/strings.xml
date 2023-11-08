@@ -12,5 +12,11 @@
     <string name="menu_inicio">Inicio</string>
     <string name="menu_calendario">Calendario Escolar</string>
     <string name="menu_horario">Horario</string>
+    <string name="menu_calificaciones">Calificaciones</string>
+    <string name="menu_materias">Materias</string>
+    <string name="menu_profesores">Profesores</string>
+    <string name="menu_notas">Notas</string>
+
+
 
 </resources>
