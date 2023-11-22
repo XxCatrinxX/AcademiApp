@@ -11,27 +11,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/primary"
-        android:alpha="0.5" />
+        android:alpha="0.5"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp" >
 
         <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animation"
             android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_height="210dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="98dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="98dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/create_account" />
     </RelativeLayout>
-
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,13 +40,150 @@
             android:id="@+id/RLcc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="600dp"
-            android:layout_marginBottom="-600dp"
-            android:background="@color/white"
-            app:cardCornerRadius="30dp">
-            
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="500dp"
+            android:layout_marginBottom="-1000dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            app:cardCornerRadius="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crear Cuenta"
+                    android:textColor="@color/primary"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresa los datos solicitados para crear una cuenta"
+                    android:textColor="#292828"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtnombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/hint"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tetnombre"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/baseline_account_box_24"
+                            android:hint=" Nombre"
+                            android:textColor="@color/gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtapellido"
+                        android:layout_width="212dp"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/hint"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tetapellido"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:hint=" Apellido"
+                            android:textColor="@color/gray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtcorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/hint"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tetcorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/baseline_markunread_24"
+                        android:hint=" Correo Electronico"
+                        android:textColor="@color/gray" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtusername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/hint"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tetusername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/baseline_person_4_24"
+                        android:hint=" Nombre de Usuario"
+                        android:textColor="@color/gray" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/hint"
+                    app:endIconMode="password_toggle" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tetpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/baseline_password_24"
+                        android:hint=" Contraseña"
+                        android:inputType="textPassword"
+                        android:textColor="@color/gray" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp" />
+
+                <Button
+                    android:id="@+id/btncuentacreada"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/secondary"
+                    android:onClick="cuentacreada"
+                    android:text="REGISTRAR"
+                    app:cornerRadius="32dp" />
+
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
-
     </ScrollView>
-
 </RelativeLayout>

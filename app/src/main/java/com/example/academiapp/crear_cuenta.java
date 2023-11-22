@@ -6,17 +6,23 @@ import androidx.cardview.widget.CardView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.graphics.Color;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
 public class crear_cuenta extends AppCompatActivity {
 
     CardView RLcc;
-    Button button;
-    private boolean isButtonColorChanged = false;
+    Button btncuentacreada;
+    TextInputLayout txtnombre, txtapellido, txtcorreo, txtusername;
+    TextInputEditText tetnombre, tetapellido, tetcorreo, tetusername, tetpassword;
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -26,28 +32,36 @@ public class crear_cuenta extends AppCompatActivity {
         setContentView(R.layout.activity_crear_cuenta);
 
         RLcc = findViewById(R.id.RLcc);
-       // button = findViewById(R.id.registerBtn);
+        btncuentacreada = findViewById(R.id.btncuentacreada);
+        tetnombre = findViewById(R.id.tetnombre);
+        tetapellido = findViewById(R.id.tetnombre);
+        tetcorreo = findViewById(R.id.tetnombre);
+        tetusername = findViewById(R.id.tetnombre);
+        tetpassword = findViewById(R.id.tetpassword);
+        txtnombre = findViewById(R.id.txtnombre);
+        txtapellido = findViewById(R.id.txtapellido);
+        txtcorreo = findViewById(R.id.txtcorreo);
+        txtusername = findViewById(R.id.txtusername);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isButtonColorChanged) {
-                    // Cambiar el color a su estado original
-                    button.setBackgroundColor(Color.parseColor("#b944ea")); // Puedes cambiar el color a tu gusto
-                    isButtonColorChanged = false;
-                } else {
-                    // Cambiar el color a otro color cuando hagas clic
-                    button.setBackgroundColor(Color.parseColor("#FF5733")); // Puedes cambiar el color a tu gusto
-                    isButtonColorChanged = true;
-                    Intent i = new Intent(getApplicationContext(), Login.class);
-                    startActivity(i);
-                }
+
+        RLcc.animate().translationY(-900).setDuration(2000).setStartDelay(0);
+
+        tetcorreo.setOnKeyListener((v, keyCode, event) -> {
+            if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                    (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                tetusername.requestFocus();
+                return true;
             }
+            return false;
         });
 
-        RLcc.animate().translationY(-1190).setDuration(2000).setStartDelay(0);
+
 
     }
 
+    public void cuentacreada(View view){
+        Intent i = new Intent(this, Login.class);
+        startActivity(i);
+    }
 
 }

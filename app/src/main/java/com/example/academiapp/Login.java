@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.view.KeyEvent;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -69,6 +69,15 @@ public class Login extends AppCompatActivity {
                     }
                 }
             }
+        });
+
+        tetusuario.setOnKeyListener((v, keyCode, event) -> {
+            if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                    (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                tetcontraseña.requestFocus();
+                return true;
+            }
+            return false;
         });
 
     }
