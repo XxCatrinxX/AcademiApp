@@ -48,12 +48,19 @@
             android:textColorHint="@color/hint" />
 
         <EditText
+            android:id="@+id/txtmateria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Materia"
+            android:textColorHint="@color/hint" />
+
+        <EditText
             android:id="@+id/txtHA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Horario de Atencion"
-            android:inputType="time"
             android:textColorHint="@color/hint" />
 
         <Button
@@ -61,14 +68,14 @@
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:text="Guardar"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:text="Guardar" />
 
 
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

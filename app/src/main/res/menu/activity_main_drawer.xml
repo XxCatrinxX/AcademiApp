@@ -34,6 +34,12 @@
 
         <item
 
+            android:id="@+id/nav_tareas"
+            android:icon="@drawable/baseline_menu_book_24"
+            android:title="Tareas" />
+
+        <item
+
             android:id="@+id/nav_profesores"
             android:icon="@drawable/profesor"
             android:title="Profesores" />
@@ -52,10 +58,6 @@
             <group android:checkableBehavior="single" >
 
                 <item
-                    android:icon="@drawable/ajustes"
-                    android:title="Ajustes"/>
-
-                <item
                     android:icon="@drawable/ayuda"
                     android:title="Ayuda"/>
 
@@ -63,7 +65,9 @@
 
             <group>
 
-                <item android:icon="@drawable/salida"
+                <item
+                    android:id="@+id/nav_salir"
+                    android:icon="@drawable/salida"
                     android:title="Salir" />
 
             </group>

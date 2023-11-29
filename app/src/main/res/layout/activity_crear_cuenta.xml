@@ -179,7 +179,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:backgroundTint="@color/secondary"
-                    android:onClick="cuentacreada"
                     android:text="REGISTRAR"
                     app:cornerRadius="32dp" />
 
